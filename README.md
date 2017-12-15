@@ -42,7 +42,8 @@
    * Espresso
    * UI Automator
 * Robolectric单元测试框架
-   * ……
+   * 安装与使用
+   * 更多测试
 * Appium环境搭建
    * Appium介绍
    * Appium与Selenium
@@ -67,7 +68,7 @@
    * 测试运行粒度
    * 高级使用技巧		
 * TestNG与appium实战
-   * ……
+   * ……
 * PO设计模式与测试封装
    * Page Object
    * 基于 appium 的封装
