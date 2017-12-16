@@ -1,5 +1,6 @@
 package com.example.androidut;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final static String EXTRA_MESSAGE = "com.example.myapp04.MESSAGE";
+    public final static String EXTRA_MESSAGE = "com.example.androidut.MESSAGE";
     private String lifecycle;
 
     @Override
@@ -67,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         lifecycle = "onDestroy";
+    }
+
+    public void showDialog(View view){
+        AlertDialog alertDialog = new AlertDialog.Builder(this).setMessage(R.string.sample_dialog_message)
+                .setTitle(R.string.sample_dialog_title).create();
+        alertDialog.show();
     }
 
 }

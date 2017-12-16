@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">MyApp04</string>
+    <string name="app_name">AndroidUT</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">send</string>
+    <string name="sample_dialog_message">this is message</string>
+    <string name="sample_dialog_title">Title</string>
 </resources>

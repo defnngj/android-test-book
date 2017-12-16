@@ -43,7 +43,7 @@ public class MainActivityTest {
     public void testActivity() {
         MainActivity mainActivity = Robolectric.setupActivity(MainActivity.class);
         assertNotNull(mainActivity);
-        assertEquals(mainActivity.getTitle(), "MyApp04");
+        assertEquals(mainActivity.getTitle(), "AndroidUT");
     }
 
     /**
