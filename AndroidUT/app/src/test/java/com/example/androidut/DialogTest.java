@@ -39,7 +39,6 @@ public class DialogTest {
         //点击按钮，出现对话框
         dialogButton.performClick();
         AlertDialog latestAlertDialog = ShadowAlertDialog.getLatestAlertDialog();
-        Log.i("dialog message:",latestAlertDialog.toString());
         assertNotNull(latestAlertDialog);
     }
 }

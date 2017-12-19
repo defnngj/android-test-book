@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 
@@ -12,12 +13,15 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.example.androidut.MESSAGE";
     private String lifecycle;
+    private CheckBox inverseCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lifecycle = "onCreate";
+
+        inverseCheckBox = (CheckBox) findViewById(R.id.checkbox);
     }
 
     /** Called when the user clicks the Send button */
@@ -71,9 +75,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDialog(View view){
-        AlertDialog alertDialog = new AlertDialog.Builder(this).setMessage(R.string.sample_dialog_message)
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setMessage(R.string.sample_dialog_message)
                 .setTitle(R.string.sample_dialog_title).create();
         alertDialog.show();
     }
+
+
+    public void inverse(View view){
+        inverseCheckBox.setChecked(!inverseCheckBox.isChecked());
+    }
+
 
 }

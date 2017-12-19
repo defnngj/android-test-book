@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.androidut.MainActivity">
+    tools:context="com.example.androidut.MainActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,5 +33,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dialog测试"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/inverse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inverse"
+            android:text="UI组件状态验证"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_checkbox"
+            android:checked="false" />
+
+    </LinearLayout>
 
 </LinearLayout>
