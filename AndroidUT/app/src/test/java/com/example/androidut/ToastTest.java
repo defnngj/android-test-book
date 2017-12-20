@@ -1,8 +1,6 @@
 package com.example.androidut;
 
 
-import android.app.AlertDialog;
-import android.util.Log;
 import android.widget.Button;
 
 import org.junit.Before;
@@ -11,32 +9,30 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowAlertDialog;
-import org.robolectric.shadows.ShadowLog;
+import org.robolectric.shadows.ShadowToast;
 
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.DEFAULT_MANIFEST_NAME, constants=BuildConfig.class, sdk = 23)
-public class DialogTest {
-
+public class ToastTest {
     private MainActivity mainActivity;
-    private Button dialogButton;
+    private Button toastButton;
 
     @Before
     public void setUp() {
         mainActivity = Robolectric.setupActivity(MainActivity.class);
-        dialogButton = (Button) mainActivity.findViewById(R.id.dialog_button);
+        toastButton = (Button) mainActivity.findViewById(R.id.toast_button);
     }
 
     /**
-     * Dialog的测试
+     * Toast的测试
      */
     @Test
-    public void testDialog() {
-        //点击按钮，出现对话框
-        dialogButton.performClick();
-        AlertDialog latestAlertDialog = ShadowAlertDialog.getLatestAlertDialog();
-        assertNotNull(latestAlertDialog);
+    public void testToast() {
+        //点击按钮，出现吐司
+        toastButton.performClick();
+        assertEquals(ShadowToast.getTextOfLatestToast(), "This is a hint of information");
     }
+
 }

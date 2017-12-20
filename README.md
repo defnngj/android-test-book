@@ -10,9 +10,10 @@
 
  * 自动化测试开发基础
    * 什么是测试开发？
-   * android分层测试概念
-   * 如何学习自动化测试
-   * Android自动化测试工具
+   * 在Android上测试应用
+   * 迭代开发工作流
+   * 测试金字塔
+   * 如何学习本书
 * 测试开发基础
    * Java 环境
    * IntelliJ IDEA
@@ -24,7 +25,7 @@
    * JUnit4
    * JUnit5
 * mock单元测试库
-   * 什么是mock ？
+   * 什么是mock？
    * Mockit框架基础
    * Mockito应用与思考
    * PowerMock框架
@@ -44,6 +45,9 @@
    * 安装与使用
    * Activity测试
    * Dialog测试
+   * UI控件状态测试
+   * Toast测试
+   * 资源文件访问测试
 * Appium环境搭建
    * Appium介绍
    * Appium与Selenium

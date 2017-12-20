@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -81,10 +82,13 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-
     public void inverse(View view){
         inverseCheckBox.setChecked(!inverseCheckBox.isChecked());
     }
 
+    public void showToast(View view){
+        Toast.makeText(this,"This is a hint of information",Toast
+                .LENGTH_LONG).show();
+    }
 
 }
