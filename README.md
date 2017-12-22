@@ -48,6 +48,8 @@
    * UI控件状态测试
    * Toast测试
    * 资源文件访问测试
+   * Broadcast测试
+   * Service测试
 * Appium环境搭建
    * Appium介绍
    * Appium与Selenium
