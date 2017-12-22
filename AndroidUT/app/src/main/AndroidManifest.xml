@@ -17,6 +17,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayMessageActivity"></activity>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.androidut" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

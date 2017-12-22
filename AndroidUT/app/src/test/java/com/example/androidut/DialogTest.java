@@ -2,7 +2,6 @@ package com.example.androidut;
 
 
 import android.app.AlertDialog;
-import android.util.Log;
 import android.widget.Button;
 
 import org.junit.Before;
@@ -12,7 +11,6 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowAlertDialog;
-import org.robolectric.shadows.ShadowLog;
 
 import static org.junit.Assert.*;
 
