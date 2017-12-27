@@ -50,6 +50,7 @@
    * 资源文件访问测试
    * Broadcast测试
    * Service测试
+   * Mock应用
 * Appium环境搭建
    * Appium介绍
    * Appium与Selenium
