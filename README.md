@@ -38,6 +38,7 @@
    * 启动另一个 Activity
 * Android测试支持库
    * Android测试库分类
+   * ADB
    * AndroidJUnitRunner
    * Espresso
    * UI Automator
