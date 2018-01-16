@@ -1,0 +1,18 @@
+group 'com.mock.sample'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'  //Jacoco 插件
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //testCompile group: 'org.mockito', name: 'mockito-core', version: '2.13.0'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+}
