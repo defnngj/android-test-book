@@ -32,7 +32,6 @@
 * Android环境搭建
    * Android SDK
    * Android Studio  
-* Android开发文档  
    * Android项目介绍  
    * 构建简单的用户界面
    * 启动另一个 Activity
@@ -68,6 +67,10 @@
    * 键盘操作
    * TouchAction操作
    * 其它操作
+* Appium测试实例
+   * 测试原生应用
+ * 测试移动Web应用
+ * 测试混合应用
 * TestNG单元测试
    * 安装与使用
    * 第一个测试用例
@@ -75,13 +78,15 @@
    * testng.mxl文件解析
    * 测试运行粒度
    * 高级使用技巧		
-* TestNG与appium实战
-   * ……
+   * TestNG与appium应用
 * PO设计模式与测试封装
    * Page Object
-   * 基于 appium 的封装
+   * 基于appium的封装
 * Jenkins持续集成
    * 环境搭建
    * 创建任务
    * 运行构建
    * 定时执行构建
+   * 运行android测试
+* docker-appium 
+
