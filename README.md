@@ -75,11 +75,10 @@
    * 键盘操作
    * TouchAction操作
    * 其它操作
-
-* Appium测试实例
-   * 测试原生应用
-   * 测试移动Web应用
-   * 测试混合应用
+   * Appium测试实例
+     * 测试原生应用
+     * 测试移动Web应用
+     * 测试混合应用
 
 * TestNG单元测试
    * 安装与使用
@@ -92,7 +91,12 @@
 
 * PO设计模式与测试封装
    * Page Object
-   * 基于appium的封装
+
+* appium实战
+   * 准备工作
+   * 简单的测试用例
+   * 整合TestNG
+   * 整合Page Object设计模式
 
 * Jenkins持续集成
    * 环境搭建
