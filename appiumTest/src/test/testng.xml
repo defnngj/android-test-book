@@ -2,7 +2,20 @@
 <suite name="Suite1" verbose="1" >
     <test name="test1" >
         <classes>
-            <class name="bbs.SwitchPlateTest" />
+            <class name="bbs.SwitchPlatePageTest"/>
         </classes>
     </test>
+
+    <test name="test2" >
+        <classes>
+            <class name="bbs.SearchPostTest"/>
+        </classes>
+    </test>
+
+    <test name="test3" >
+        <classes>
+            <class name="bbs.WebViewTest"/>
+        </classes>
+    </test>
+
 </suite>

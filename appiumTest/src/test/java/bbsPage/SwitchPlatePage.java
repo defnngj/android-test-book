@@ -2,11 +2,15 @@ package bbsPage;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 
 public class SwitchPlatePage {
 
     private AndroidDriver driver;
+    public static final String BUTTONS = "com.meizu.mzbbs:id/h9";
 
     public SwitchPlatePage(AndroidDriver driver) {
         this.driver = driver;
@@ -20,9 +24,9 @@ public class SwitchPlatePage {
     }
 
     public void photographyButton() {
-        this.driver.findElement(By
-                .xpath("//android.widget.LinearLayout/android.widget"+
-                        ".FrameLayout[2]")).click();
+        List<WebElement> button =this.driver.findElements(By
+                .id(BUTTONS));
+        button.get(1).click();
     }
 
     public String photographyTitle() {
@@ -33,9 +37,9 @@ public class SwitchPlatePage {
     }
 
     public void TryPlayButton() {
-        this.driver.findElement(By
-                .xpath("//android.widget.LinearLayout/android.widget."
-                        +".FrameLayout[3]")).click();
+        List<WebElement> button =this.driver.findElements(By
+                .id(BUTTONS));
+        button.get(2).click();
     }
 
     public String TryPlayTitle() {
@@ -46,9 +50,9 @@ public class SwitchPlatePage {
     }
 
     public void UserButton() {
-        this.driver.findElement(By
-                .xpath("//android.widget.LinearLayout/android.widget"+
-                        ".FrameLayout[4]")).click();
+        List<WebElement> button =this.driver.findElements(By
+                .id(BUTTONS));
+        button.get(3).click();
     }
 
     public String UserName() {
