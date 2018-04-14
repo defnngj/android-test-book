@@ -82,15 +82,13 @@
 
 * TestNG单元测试
    * 安装与使用
-   * 第一个测试用例
-   * Fixture 方法
-   * testng.mxl文件解析
-   * 测试运行粒度
-   * 高级使用技巧		
+   * 高级使用技巧
+   * 生成HTML测试报告
    * TestNG与appium应用
 
 * PO设计模式与测试封装
    * Page Object
+   * 计算器实例
 
 * appium实战
    * 准备工作

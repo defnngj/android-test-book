@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="testng测试用例"  parallel="tests" thread-count="2" verbose="1" >
+    <test name="测试1">
+        <groups>
+            <run>
+                <exclude name="异常"  />   <!-- 排除不执行的测试用例 -->
+                <include name="高"  />  <!-- 指定执行的测试用例 -->
+            </run>
+        </groups>
+
+        <classes>
+            <class name="sample.TagTest"/>
+        </classes>
+
+    </test>
+
+    <test name="测试2" preserve-order="false" >
+        <classes>
+            <class name="sample.CaseRunTest"/>
+        </classes>
+    </test>
+
+    <test name="简单测试">
+        <parameter name="add1" value="3"/>
+        <parameter name="add2" value="2"/>
+        <parameter name="result" value="5"/>
+        <classes>
+            <class name="sample.DataProviderTest" />
+        </classes>
+    </test>
+
+</suite>
