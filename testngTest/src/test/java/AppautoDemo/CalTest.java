@@ -1,7 +1,6 @@
-package PageObject;
+package AppautoDemo;
 
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import Appauto.AppiumEmulator;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -9,26 +8,17 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import java.net.MalformedURLException;
-import java.net.URL;
 
-public class CalcuatorTest {
 
-    private AndroidDriver driver;
-    private CalcuatorPage calPage;
+public class CalTest {
+
+    public AppiumEmulator driver;
+    public CalPage calPage;
 
     @BeforeClass
-    public void startApp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("automationName", "Appium");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "7.0");
-        capabilities.setCapability("appPackage", "com.android.calculator2");
-        capabilities.setCapability("appActivity", ".Calculator");
-
-        this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
-                capabilities);
-        this.calPage = new CalcuatorPage(this.driver);
+    public void startApp()  throws MalformedURLException{
+        driver = new AppiumEmulator();
+        this.calPage = new CalPage(driver);
     }
 
     // 关闭APP

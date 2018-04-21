@@ -1,12 +1,7 @@
 package BBSTest;
 
-import PageObject.CalcuatorPage;
-import PageObject.NumberPage;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
