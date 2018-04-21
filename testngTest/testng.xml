@@ -29,4 +29,10 @@
         </classes>
     </test>
 
+    <test name="计算器测试" preserve-order="false" >
+        <classes>
+            <class name="PageObject.CalcuatorTest"/>
+        </classes>
+    </test>
+
 </suite>
