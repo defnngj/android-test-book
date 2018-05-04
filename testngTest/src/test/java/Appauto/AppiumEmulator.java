@@ -1,5 +1,5 @@
 package Appauto;/*
- * Copyright (c) 2016-2017 Knife, Inc. and other contributors
+ * Copyright (c) 2016-2018 Appauto, Inc. and other contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -14,27 +14,15 @@ package Appauto;/*
  *  limitations under the License.
  *
  */
-
 import io.appium.java_client.android.AndroidDriver;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Set;
+
 
 /**
  * knife.BrowserEmulator is based on Selenium3 and adds some enhancements
@@ -44,12 +32,10 @@ import java.util.Set;
 public class AppiumEmulator {
 
     static AndroidDriver driver;
-    ChromeDriverService chromeServer;
-    JavascriptExecutor javaScriptExecutor;
 
     int timeout = Integer.parseInt(GlobalSettings.timeout);
 
-    public AppiumEmulator() throws MalformedURLException {
+    public AppiumEmulator() {
 
         String deviceName = GlobalSettings.deviceName;
         String automationName = GlobalSettings.automationName;
@@ -73,14 +59,12 @@ public class AppiumEmulator {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
      * Analyzing targeting elements, and positioning elements
      *
-     * @param xpath
-     *            the element's
+     * @param xpath: the element's
      */
     public WebElement getElement(String xpath) {
 
@@ -130,8 +114,7 @@ public class AppiumEmulator {
     /**
      * Click the page element
      *
-     * @param xpath
-     *  the element's xpath
+     * @param xpath: the element's xpath
      */
     public void click(String xpath) {
 
@@ -147,10 +130,8 @@ public class AppiumEmulator {
      * Type text at the page element<br>
      * Before typing, try to clear existed text
      *
-     * @param xpath
-     *            , the element's xpath
-     * @param text
-     *            , the input text
+     * @param xpath: the element's xpath
+     * @param text: the input text
      */
     public void type(String xpath, String text) {
 
@@ -167,12 +148,116 @@ public class AppiumEmulator {
      * Return text from specified web element.
      *
      * @param xpath
-     * @return
+     * @return text
      */
     public String getText(String xpath) {
         WebElement element = getElement(xpath);
         return element.getText();
     }
 
+    /**
+     * install App
+     *
+     * @param app:app path
+     */
+    public void installApp(String app){
+        driver.installApp(app);
+    }
+
+    /**
+     * uninstall App
+     *
+     * @param packageName: package name.
+     */
+    public void removeApp(String packageName){
+        driver.removeApp(packageName);
+    }
+
+    /**
+     * is App installed
+     *
+     * @param packageName: package name.
+     */
+    public void isAppInstalled(String packageName){
+        driver.isAppInstalled(packageName);
+    }
+
+    /**
+     * Close the current open App
+     *
+     * @param
+     */
+    public void closeApp(){
+        driver.closeApp();
+    }
+
+    /**
+     * Restart the App
+     *
+     * @param
+     */
+    public void launchApp(){
+        driver.launchApp();
+    }
+
+    /**
+     * Run App in background
+     *
+     * @param timing: seconds.
+     */
+    public void runAppInBackground(Duration timing){
+        driver.runAppInBackground(timing);
+    }
+
+    /**
+     * Reset App
+     *
+     * @param
+     */
+    public void resetApp(){
+        driver.resetApp();
+    }
+
+    /**
+     * get context
+     *
+     * @param
+     */
+    public void getContext(){
+        driver.getContext();
+    }
+
+    /**
+     * get all context
+     *
+     * @param
+     */
+    public void getContextHandles(){
+        driver.getContextHandles();
+    }
+
+    /**
+     * Switch to NATIVE_APP or WEBVIEW
+     * @param sContext window name
+     */
+    private static void switchToContext(String sContext) {
+
+        Set<String> contextNames = driver.getContextHandles();
+        for (String contextName : contextNames) {
+            if (contextName.contains(sContext)) {
+                driver.context(contextName);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Keyboard entry
+     * @param key: keyboard name
+     */
+    public void pressKey(String key){
+        PressKeyClass p = new PressKeyClass();
+        p.press(driver, key);
+    }
 
 }
