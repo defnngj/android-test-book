@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 import android.app.Service;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

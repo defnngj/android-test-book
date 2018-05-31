@@ -1,9 +1,9 @@
-package com.example.androidut;
+package example.com.androidut;
 
 import android.content.Context;
 
 /**
- * 被测试类，用户返回 Android 布局中的文本。
+ * 被测试类，用于返回 Android 布局中的文本。
  */
 
 public class ClassUnderTest{

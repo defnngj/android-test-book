@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 
 import android.app.AlertDialog;
@@ -12,10 +12,13 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowAlertDialog;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
+/**
+ *  对话框Dialog测试
+ */
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest=Config.DEFAULT_MANIFEST_NAME, constants=BuildConfig.class, sdk = 23)
+@Config(manifest=Config.DEFAULT_MANIFEST_NAME, constants=BuildConfig.class, sdk = 24)
 public class DialogTest {
 
     private MainActivity mainActivity;

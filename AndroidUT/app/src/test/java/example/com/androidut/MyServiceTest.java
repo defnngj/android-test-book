@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 import org.junit.Before;
 import org.junit.Test;

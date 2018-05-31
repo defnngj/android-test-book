@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.widget.EditText;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.junit.Assert.*;
-
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.android.controller.ActivityController;
@@ -18,9 +16,13 @@ import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowLog;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
 
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest=Config.DEFAULT_MANIFEST_NAME, constants=BuildConfig.class, sdk = 23)
+@Config(manifest=Config.DEFAULT_MANIFEST_NAME, constants=BuildConfig.class, sdk = 24)
 public class MainActivityTest {
 
     private MainActivity mainActivity;
@@ -28,7 +30,7 @@ public class MainActivityTest {
     private Button sendButton;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception{
         mainActivity = Robolectric.setupActivity(MainActivity.class);
         editMessage = (EditText) mainActivity.findViewById(R.id.edit_message);
         sendButton = (Button) mainActivity.findViewById(R.id.send_button);

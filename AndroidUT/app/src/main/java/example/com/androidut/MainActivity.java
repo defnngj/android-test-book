@@ -1,4 +1,4 @@
-package com.example.androidut;
+package example.com.androidut;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -9,9 +9,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
-
+    
     public final static String EXTRA_MESSAGE = "com.example.androidut.MESSAGE";
     private String lifecycle;
     private CheckBox inverseCheckBox;
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         inverseCheckBox = (CheckBox) findViewById(R.id.checkbox);
     }
-
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
         // Do something in response to button
@@ -90,5 +88,4 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"This is a hint of information",Toast
                 .LENGTH_LONG).show();
     }
-
 }
