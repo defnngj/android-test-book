@@ -1,5 +1,7 @@
 package mockDB;
 
+import DB.DBConnect;
+
 import java.sql.ResultSet;
 
 /**
@@ -11,7 +13,7 @@ public class DBConnectTest {
     public static void main(String[] args) {
         String sql = "select * from auth_user";
 
-        mockDB.DBConnect db = new mockDB.DBConnect();
+        DBConnect db = new DBConnect();
 
         try {
             ResultSet rs = db.select(sql);

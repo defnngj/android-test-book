@@ -2,6 +2,10 @@ package mockSample;
 
 import org.junit.Before;
 import org.junit.Test;
+import sample.StuController;
+import sample.Student;
+import sample.StudentDAO;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 

@@ -1,4 +1,4 @@
-package mockDB;
+package DB;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

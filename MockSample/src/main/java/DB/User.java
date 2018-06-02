@@ -1,4 +1,4 @@
-package mockDB;
+package DB;
 
 
 public class User {

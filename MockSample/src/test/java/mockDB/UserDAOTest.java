@@ -1,5 +1,7 @@
 package mockDB;
 
+import DB.User;
+import DB.UserDAO;
 import org.junit.Before;
 import org.junit.Test;
 

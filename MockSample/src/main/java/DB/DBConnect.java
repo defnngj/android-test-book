@@ -1,4 +1,4 @@
-package mockDB;
+package DB;
 
 import java.sql.*;
 

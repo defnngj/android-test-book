@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mockitoSample.MockitoDemo" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-06-02T08:46:51" hostname="DESKTOP-SMGQBBM" time="0.213">
+  <properties/>
+  <testcase name="verify_behaviour" classname="mockitoSample.MockitoDemo" time="0.066"/>
+  <testcase name="with_arguments" classname="mockitoSample.MockitoDemo" time="0.119"/>
+  <testcase name="when_doThrow" classname="mockitoSample.MockitoDemo" time="0.004"/>
+  <testcase name="verifying_number_of_invocations" classname="mockitoSample.MockitoDemo" time="0.01"/>
+  <testcase name="verification_in_order" classname="mockitoSample.MockitoDemo" time="0.01"/>
+  <testcase name="with_arguments2" classname="mockitoSample.MockitoDemo" time="0.001"/>
+  <testcase name="when_thenReturn" classname="mockitoSample.MockitoDemo" time="0.001"/>
+  <system-out><![CDATA[first
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

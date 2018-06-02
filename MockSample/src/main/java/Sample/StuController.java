@@ -1,4 +1,4 @@
-package mockSample;
+package sample;
 
 public class StuController {
 

@@ -2,10 +2,12 @@ package mockThink;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 import static org.mockito.Mockito.*;
-
 import Think.*;
+
+/**
+ *  教材 Mockito应用与思考
+ */
 
 public class CalculaterTest {
 
